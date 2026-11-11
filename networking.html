@@ -3,770 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>International Networking SIG | Candidate Group</title>
-  <meta name="description" content="Global 1-on-1 networking rounds for members worldwide. Fostering authentic conversations, cross-border connections, and intellectual exchange." />
-  
-  <!-- Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <title>Global 1-on-1 Networking | Candidate I-SIG</title>
+  <meta name="description" content="Bi-weekly 1-on-1 virtual networking rounds for verified Mensa members." />
   <style>
     :root {
-      --brand-navy: #002b49;
-      --brand-blue-dark: #0a3d62;
-      --brand-blue-accent: #006699;
-      --brand-blue-light: #e8f1f5;
-      --bg-page: #f8fafc;
-      --bg-card: #ffffff;
-      --text-primary: #1e293b;
-      --text-secondary: #475569;
-      --text-muted: #64748b;
-      --border-color: #e2e8f0;
-      --border-accent: #cbd5e1;
-      --max-w: 1120px;
+      --navy: #002b49;
+      --blue: #006699;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-page);
-      color: var(--text-primary);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 2rem 1rem;
     }
-
-    /* Top Utility Bar */
-    .top-bar {
-      background-color: var(--brand-navy);
-      color: #ffffff;
-      font-size: 0.8rem;
-      padding: 0.5rem 1.5rem;
-      text-align: center;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .container {
-      max-width: var(--max-w);
+    .wrapper {
+      max-width: 680px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.5rem 2rem;
     }
-
-    /* Navigation Header */
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
-
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 72px;
-    }
-
-    .sig-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: var(--brand-navy);
-    }
-
-    .sig-brand .logo-text {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .sig-brand .badge-tag {
-      background: var(--brand-blue-light);
-      color: var(--brand-blue-accent);
+    .badge {
+      display: inline-block;
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 0.2rem 0.55rem;
+      color: var(--blue);
+      background: #e8f1f5;
+      padding: 0.25rem 0.6rem;
       border-radius: 4px;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    nav a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      margin-left: 1.75rem;
-      transition: color 0.15s ease;
-    }
-
-    nav a:hover {
-      color: var(--brand-blue-accent);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 4.5rem 0 3.5rem;
-      text-align: center;
-      background: linear-gradient(180deg, #ffffff 0%, var(--bg-page) 100%);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .hero-badge {
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--brand-blue-accent);
-      background: var(--brand-blue-light);
-      padding: 0.35rem 1rem;
-      border-radius: 9999px;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
-      font-weight: 800;
-      color: var(--brand-navy);
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      max-width: 850px;
-      margin: 0 auto 1.25rem;
-    }
-
-    .hero p {
-      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-      color: var(--text-secondary);
-      max-width: 720px;
-      margin: 0 auto 2.25rem;
-      font-weight: 400;
-    }
-
-    .btn-group {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.85rem 1.85rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .btn-primary {
-      background-color: var(--brand-navy);
-      color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0, 43, 73, 0.15);
-    }
-
-    .btn-primary:hover {
-      background-color: var(--brand-blue-dark);
-      box-shadow: 0 4px 10px rgba(0, 43, 73, 0.25);
-    }
-
-    .btn-secondary {
-      background-color: #ffffff;
-      color: var(--brand-navy);
-      border: 1px solid var(--border-accent);
-    }
-
-    .btn-secondary:hover {
-      background-color: #f1f5f9;
-      border-color: #94a3b8;
-    }
-
-    /* Track Record Banner */
-    .track-record-banner {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.5rem 2rem;
-      max-width: 780px;
-      margin: 2.5rem auto 0;
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      text-align: left;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    }
-
-    .track-record-banner .stat-num {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--brand-blue-accent);
-      line-height: 1;
-      white-space: nowrap;
-    }
-
-    .track-record-banner .stat-desc {
-      font-size: 0.92rem;
-      color: var(--text-secondary);
-    }
-
-    .track-record-banner .stat-desc strong {
-      color: var(--brand-navy);
-    }
-
-    /* Status Bar */
-    .status-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.25rem 2rem;
-      max-width: 650px;
-      margin: 1.5rem auto 0;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      text-align: left;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
-    }
-
-    .status-card .status-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--text-muted);
       letter-spacing: 0.05em;
-    }
-
-    .status-card .status-val {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--brand-navy);
-    }
-
-    /* Sections */
-    section {
-      padding: 4.5rem 0;
-    }
-
-    .section-title {
-      font-size: 1.9rem;
-      font-weight: 800;
-      text-align: center;
-      color: var(--brand-navy);
-      letter-spacing: -0.02em;
       margin-bottom: 0.75rem;
     }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--text-secondary);
-      max-width: 650px;
-      margin: 0 auto 3rem;
-      font-size: 1.05rem;
-    }
-
-    /* Grid Layouts */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 2.25rem 1.75rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(0, 43, 73, 0.08);
-      border-color: var(--brand-blue-accent);
-    }
-
-    .card-icon {
-      font-size: 2rem;
-      margin-bottom: 1.25rem;
-      display: inline-block;
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-      color: var(--brand-navy);
-    }
-
-    .card p {
-      color: var(--text-secondary);
-      font-size: 0.92rem;
-      line-height: 1.6;
-    }
-
-    /* Requirements Box */
-    .prereq-card {
-      background: var(--brand-blue-light);
-      border: 1px solid #bfdbfe;
-      border-radius: 8px;
-      padding: 2.5rem;
-      max-width: 820px;
-      margin: 0 auto 3.5rem;
-    }
-
-    .prereq-card h3 {
-      font-size: 1.3rem;
+    h1 {
+      font-size: 1.85rem;
+      color: var(--navy);
       font-weight: 800;
-      color: var(--brand-navy);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
     }
-
-    .prereq-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.25rem;
-    }
-
-    .prereq-item {
-      background: #ffffff;
-      padding: 1.25rem 1.5rem;
-      border-radius: 6px;
-      border: 1px solid var(--border-color);
-    }
-
-    .prereq-item h4 {
-      font-size: 1rem;
-      color: var(--brand-navy);
-      font-weight: 700;
-      margin-bottom: 0.35rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .prereq-item p {
-      font-size: 0.88rem;
-      color: var(--text-secondary);
-      line-height: 1.5;
-    }
-
-    /* Guidelines List */
-    .guidelines-box {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-left: 4px solid var(--brand-blue-accent);
-      border-radius: 6px;
-      padding: 2rem 2.25rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    }
-
-    .guidelines-box ul {
-      list-style-type: none;
-    }
-
-    .guidelines-box li {
-      position: relative;
-      padding-left: 1.85rem;
-      margin-bottom: 1.15rem;
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-    }
-
-    .guidelines-box li:last-child {
-      margin-bottom: 0;
-    }
-
-    .guidelines-box li strong {
-      color: var(--brand-navy);
-      font-weight: 600;
-    }
-
-    .guidelines-box li::before {
-      content: "•";
-      position: absolute;
-      left: 0.35rem;
-      top: -0.1rem;
-      font-size: 1.5rem;
-      color: var(--brand-blue-accent);
-    }
-
-    /* Coordinators */
-    .coord-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .coord-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 2.25rem 1.5rem;
-      text-align: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    }
-
-    .avatar-wrapper {
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 1.25rem;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid var(--border-color);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      background-color: #f1f5f9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .avatar-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .coord-card h4 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--brand-navy);
-      margin-bottom: 0.25rem;
-    }
-
-    .coord-card .role {
-      color: var(--brand-blue-accent);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-
-    .coord-card .meta {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* Footer & Disclaimers */
-    footer {
-      background: #ffffff;
-      border-top: 1px solid var(--border-color);
-      padding: 3.5rem 0 2rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .disclaimer-box {
-      background: var(--bg-page);
-      border: 1px solid var(--border-color);
-      padding: 1.5rem;
-      border-radius: 6px;
-      margin-bottom: 2.25rem;
-      line-height: 1.55;
-    }
-
-    .disclaimer-box strong {
-      color: var(--brand-navy);
-    }
-
-    .footer-bottom {
+    p { margin-bottom: 1rem; color: #334155; }
+    .status-bar {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border-color);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
     }
-
-    @media (max-width: 768px) {
-      .nav-inner {
-        flex-direction: column;
-        height: auto;
-        padding: 1rem 0;
-        gap: 0.75rem;
-      }
-      nav a {
-        margin: 0 0.5rem;
-      }
-      .track-record-banner {
-        flex-direction: column;
-        text-align: center;
-      }
-      .status-card {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-      }
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
+    .status-bar strong { color: var(--navy); }
+    h2 {
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 700;
+      margin: 1.75rem 0 0.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+    }
+    ul { list-style: disc inside; margin-bottom: 1.25rem; }
+    li { margin-bottom: 0.4rem; color: #334155; font-size: 0.95rem; }
+    li strong { color: var(--navy); }
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.85rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin: 1.75rem 0 0.5rem;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: #0a3d62; }
+    .coordinators {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+    }
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Status Bar -->
-  <div class="top-bar">
-    Candidate International Special Interest Group (Prospective I-SIG)
-  </div>
+  <main class="wrapper">
+    <span class="badge">Candidate International SIG</span>
+    <h1>Global 1-on-1 Networking</h1>
+    <p>
+      Bi-weekly virtual 1-on-1 rounds connecting verified Mensans worldwide for informal, authentic conversation across borders.
+    </p>
 
-  <!-- Header Navigation -->
-  <header>
-    <div class="container">
-      <div class="nav-inner">
-        <a href="#" class="sig-brand">
-          <span class="logo-text">NETWORKING</span>
-          <span class="badge-tag">Candidate SIG</span>
-        </a>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#prerequisites">Prerequisites</a>
-          <a href="#guidelines">Guidelines</a>
-          <a href="#coordination">Team</a>
-          <a href="#join" style="color: var(--brand-blue-accent); font-weight: 700;">Join Round</a>
-        </nav>
-      </div>
+    <div class="status-bar">
+      <div>Current Cycle: <strong id="current-round">Loading...</strong></div>
+      <div id="round-countdown">--</div>
     </div>
-  </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-badge">Worldwide 1-on-1 Connections</div>
-        <h1>Global 1-on-1 Networking for Members</h1>
-        <p>
-          Opening space for direct, unhurried, and authentic peer-to-peer conversations across continents. Two new connections every month.
-        </p>
+    <h2>How It Works</h2>
+    <ul>
+      <li><strong>Two rounds per month:</strong> Runs continuously (1st–15th and 16th–end of month).</li>
+      <li><strong>Automated matching:</strong> An algorithm pairs you with a new international peer each round.</li>
+      <li><strong>Direct scheduling:</strong> Coordinate directly via email to choose a platform (Meet, Zoom, WhatsApp) for a 60 min call.</li>
+    </ul>
 
-        <div class="btn-group">
-          <a href="#join" class="btn btn-primary">Join the Active Round</a>
-          <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
-        </div>
+    <h2>Requirements</h2>
+    <ul>
+      <li><strong>Verified Membership:</strong> Current member in good standing of a National Mensa or Direct International Member (18+).</li>
+      <li><strong>Working English:</strong> Shared communication language across participants from 90+ countries.</li>
+    </ul>
 
-        <!-- Track Record Banner -->
-        <div class="track-record-banner">
-          <div class="stat-num">60+ Rounds</div>
-          <div class="stat-desc">
-            <strong>A proven model since 2024:</strong> Originally piloted within Mensa Brasil, our structured pairing system has successfully powered over 60 consecutive rounds of direct 1-on-1 networking. We are now expanding this community to members worldwide under the prospective I-SIG framework.
-          </div>
-        </div>
+    <a href="https://docs.google.com/forms/d/e/your-form-id/viewform" target="_blank" rel="noopener" class="btn">
+      Register for Next Round
+    </a>
 
-        <!-- Live Round Status -->
-        <div class="status-card">
-          <div>
-            <div class="status-label">Active Round</div>
-            <div class="status-val" id="current-round-text">Calculating round...</div>
-          </div>
-          <div>
-            <div class="status-label">Round Closes In</div>
-            <div class="status-val" id="round-countdown">-- days</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="coordinators">
+      <strong>Coordinators:</strong> João Matheus Rugeri Murdiga (MB2990) &amp; Benício José de Oliveira Filho (MB4675)
+    </div>
 
-    <!-- Prerequisites Section -->
-    <section id="prerequisites" style="padding-bottom: 2rem;">
-      <div class="container">
-        <div class="prereq-card">
-          <h3>Participation Prerequisites</h3>
-          <p style="color: var(--text-secondary); font-size: 0.95rem;">
-            To ensure fair pairing, safety, and smooth cross-border communication, all participants must meet two core requirements:
-          </p>
-
-          <div class="prereq-list">
-            <div class="prereq-item">
-              <h4><span>✓</span> Verified Mensa Member</h4>
-              <p>You must be a current member in good standing of a recognized National Mensa or a Direct International Member.</p>
-            </div>
-            <div class="prereq-item">
-              <h4><span>✓</span> Working English Proficiency</h4>
-              <p>As our matching pool spans over 90 countries, conversations are conducted in English unless you and your match mutually decide otherwise.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works -->
-    <section id="how-it-works" style="background-color: #ffffff; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-      <div class="container">
-        <h2 class="section-title">How It Works</h2>
-        <p class="section-subtitle">
-          A light, automated framework designed to foster meaningful serendipity without unnecessary administrative overhead.
-        </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-icon">🎯</div>
-            <h3>Two Matches Per Month</h3>
-            <p>
-              Rounds run continuously (1st to 15th, and 16th to the end of the month). Our non-repeating pairing algorithm pairs you with a new participant from around the globe each cycle.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">☕</div>
-            <h3>Unhurried Video Calls</h3>
-            <p>
-              Reach out directly to your match via email or messaging to choose a convenient time and platform (Google Meet, Zoom, WhatsApp). Reserve at least 50 minutes so neither party feels rushed.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-icon">🌐</div>
-            <h3>Genuine Serendipity</h3>
-            <p>
-              Conversations are organic. Talk about shared intellectual passions, local culture, research projects, professional ventures, or simply enjoy a thoughtful exchange.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Guidelines -->
-    <section id="guidelines">
-      <div class="container">
-        <h2 class="section-title">Community Guidelines</h2>
-        <p class="section-subtitle">
-          Mutual courtesy, tolerance, and respect are expected in all meetings and communications.
-        </p>
-
-        <div class="guidelines-box">
-          <ul>
-            <li>
-              <strong>Punctuality &amp; Courtesy:</strong> Honor scheduled sessions. With varying international time zones, please give prompt notice if an unexpected schedule conflict arises.
-            </li>
-            <li>
-              <strong>Code of Conduct:</strong> In alignment with Mensa community standards, all calls must maintain an environment free of harassment. Partisan political campaigns, religious proselytizing, and discriminatory remarks are strictly prohibited.
-            </li>
-            <li>
-              <strong>Safety &amp; Compliance:</strong> Any participant reported for inappropriate or disrespectful conduct will be warned privately. In cases of recurrence, coordinators reserve the right to suspend or expel the participant from the matching pool.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Join CTA -->
-    <section id="join" style="background-color: #ffffff; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); text-align: center;">
-      <div class="container">
-        <h2 class="section-title">Register for the Next Round</h2>
-        <p class="section-subtitle">
-          Submit your details once to enter the global matching rotation. You can pause or resume participation at any time.
-        </p>
-
-        <div style="max-width: 580px; margin: 0 auto;">
-          <a href="https://docs.google.com/forms/d/e/your-form-id/viewform" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 1.05rem; padding: 1rem 2.5rem;">
-            Complete Member Registration
-          </a>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">
-            * Your contact information is never made public; it is shared only with your assigned matching partner for that specific round.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Coordinators Section -->
-    <section id="coordination">
-      <div class="container">
-        <h2 class="section-title">Coordinating Team</h2>
-        <p class="section-subtitle">
-          Initiative coordinators overseeing pairing operations and participant support.
-        </p>
-
-        <div class="coord-grid">
-          <!-- Coordinator 1 -->
-          <div class="coord-card">
-            <div class="avatar-wrapper">
-              <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Jaoaokdfsdfuewqrrdsadsadsajiiu&clothingColor=002b49&hairColor=2c1b18&topVariant=shortFlat" alt="João Matheus Rugeri Murdiga" />
-            </div>
-            <h4>João Matheus Rugeri Murdiga</h4>
-            <div class="role">Initiative Lead</div>
-            <div class="meta">Mensa Brasil (MB2990)</div>
-          </div>
-
-          <!-- Coordinator 2 -->
-          <div class="coord-card">
-            <div class="avatar-wrapper">
-              <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Jaoaokdfsdfuewqrrdsadsadsajiiu&clothingColor=002b49&hairColor=2c1b18&topVariant=shortFlat" alt="Benício José de Oliveira Filho" />
-            </div>
-            <h4>Benício José de Oliveira Filho</h4>
-            <div class="role">Co-Lead</div>
-            <div class="meta">Mensa Brasil (MB4675)</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <footer>
+      <strong>Disclaimer:</strong> This group is an initiative operated by verified members and currently undergoing formal recognition as an International Special Interest Group (I-SIG). Mensa does not hold or express ideological opinions; conversations are solely those of participating members and do not represent Mensa International Ltd. or any National Mensa.
+    </footer>
   </main>
-
-  <!-- Disclaimers -->
-  <footer>
-    <div class="container">
-      <div class="disclaimer-box">
-        <strong>General Community Disclaimer:</strong><br />
-        Mensa as an organization does not hold or express opinions on political, religious, or ideological matters. The views, conversations, and topics discussed within individual networking calls and community spaces are solely those of the participating individuals and do not represent the views or policies of Mensa International Ltd., Mensa Brasil, or any other National Mensa organization.
-      </div>
-
-      <div class="footer-bottom">
-        <div>
-          &copy; <span id="year"></span> Networking Candidate I-SIG.
-        </div>
-        <div>
-          Hosted on Cloudflare Pages &bull; <a href="https://www.mensa.org" target="_blank" rel="noopener" style="color: var(--brand-blue-accent); text-decoration: none;">mensa.org</a>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <script>
     function updateRound() {
       const now = new Date();
       const day = now.getDate();
-      const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      const currentMonth = monthNames[now.getMonth()];
+      const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      const month = monthNames[now.getMonth()];
       
-      const roundEl = document.getElementById('current-round-text');
+      const roundEl = document.getElementById('current-round');
       const countEl = document.getElementById('round-countdown');
       
-      let roundName = "";
+      let name = "";
       let remaining = 0;
       
       if (day <= 15) {
-        roundName = `Round 1 (${currentMonth} 1–15)`;
+        name = `${month} 1–15`;
         remaining = 15 - day;
       } else {
         const lastDay = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
-        roundName = `Round 2 (${currentMonth} 16–${lastDay})`;
+        name = `${month} 16–${lastDay}`;
         remaining = lastDay - day;
       }
       
-      roundEl.textContent = roundName;
-      countEl.textContent = remaining === 0 ? "Final day of current round" : `${remaining} day${remaining > 1 ? 's' : ''} remaining`;
-      
-      document.getElementById('year').textContent = now.getFullYear();
+      roundEl.textContent = name;
+      countEl.textContent = remaining === 0 ? "Closes today" : `${remaining}d left`;
     }
-
     updateRound();
   </script>
 </body>
